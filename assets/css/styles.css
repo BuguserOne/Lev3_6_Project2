@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Font: Karla */
+/* Farbe: #323A45 / #848484 */
+
+@font-face {
+    font-family: "karlaFont";
+    src: url(../fonts/Karla-VariableFont_wght.ttf);
+}
+
+/*                  BODY                     */
+
+body {
+    font-family: "karlaFont";
+    color: black;
+}
+
+/*                  NAV                      */
+
+.navBar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBar h1 {
+    margin: 20px 50px;
+}
+
+.navBar a:hover {
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.126);
+    cursor: no-drop;
+    color: #848484;
+}
+
+.navBarLinks {
+    display: flex;
+    position: relative;
+}
+
+.navBar li {
+    display: inline-block;
+}
+
+
+.navBar a {
+    color: black;
+}
+
+.toggleButton {
+    position: absolute;
+    top: 1.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggleButton .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/*                  MAIN                     */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    margin: auto;
+    width: 90vw;
+}
+
+main section {
+    margin: 5vh 0;
+    grid-column: auto;
+}
+
+
+/* ======================================== */
+
+
+.preview {
+    grid-column: 1/4;
+    margin-top: 10vh;
+}
+
+
+/* ======================================== */
+
+
+main section div {
+    width: 100%;
+}
+
+main section div img {
+    width: 100%;
+}
+
+main section div img:hover {
+    filter:opacity(60%);
+    transition: 2s;
+}
+
+main section article {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 0;
+}
+
+main section article p {
+    margin: 1vh 0;
+    color: #848484;
+}
+
+/*                  FOOTER                   */
+
+footer {
+    margin: auto;
+    width: 90vw;
+}
+
+footer section {
+    display: flex;
+}
+
+footer section article {
+    display: block;
+}
+
+footer section article:last-of-type {
+    display: block;
+    flex-direction: column;
+}
+footer section article h4, p, a ,ul {
+    color: black;
+    margin: 2vh 2vw 0 0;
+}
+
+.copyright {
+    font-size: 0.65rem;
+    margin: 3vh 0 3vh 0;
+}
+
+.smallSize {
+    font-size: 0.65rem;
+}
+
+/*                  MOBILE                   */
+
+@media (max-width: 800px) {
+    .toggleButton {
+        display: flex;
+    }
+
+    .navBarLinks {
+        display: none;
+    }
+
+    .navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBarLinks {
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    .navBarLinks.active {
+        display: flex;
+    }
+
+/*              MAIN             */
+
+    main section {
+        grid-column: 1/4;
+    }
+
+/*              FOOTER           */
+
+    footer section {
+        flex-wrap: wrap;
+    }
+
+    footer section article {
+        width: 100%;
+    }
+}
